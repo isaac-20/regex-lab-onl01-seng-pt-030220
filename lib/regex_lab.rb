@@ -16,7 +16,12 @@ def words_five_letters_long(text)
 end
 
 def first_word_capitalized_and_ends_with_punctuation?(text)
-
+  letter = text.scan(/\w+/)[0]
+  if (text.scan(/\./))&& (letter == letter.upcase)
+    return true
+  else
+    false
+  end
 end
 
 def valid_phone_number?(phone)
